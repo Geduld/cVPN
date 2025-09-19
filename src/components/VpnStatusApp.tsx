@@ -42,12 +42,6 @@ export const VpnStatusApp = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <VpnStatusIndicator status={status} size="md" />
-              <div>
-                <h1 className="text-sm font-bold gradient-text">VPN Status</h1>
-                <p className="text-xs text-muted-foreground truncate max-w-[200px]">
-                  {getStatusMessage()}
-                </p>
-              </div>
             </div>
             <Button
               variant="ghost"
