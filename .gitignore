@@ -29,3 +29,6 @@ dist-electron
 *.exe
 *.asar
 
+node_modules/
+dist-electron/
+*.exe
