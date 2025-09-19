@@ -111,18 +111,15 @@ All colors MUST be HSL.
   
   .status-secure {
     @apply bg-[hsl(var(--status-secure))];
-    box-shadow: var(--glow-secure);
   }
   
   .status-connecting {
     @apply bg-[hsl(var(--status-connecting))];
-    box-shadow: var(--glow-connecting);
     animation: pulse 2s infinite;
   }
   
   .status-vulnerable {
     @apply bg-[hsl(var(--status-vulnerable))];
-    box-shadow: var(--glow-vulnerable);
   }
 
   .gradient-text {

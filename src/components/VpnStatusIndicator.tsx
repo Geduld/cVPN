@@ -15,9 +15,9 @@ export const VpnStatusIndicator = ({ status, size = 'md' }: VpnStatusIndicatorPr
   };
 
   const iconSizeClasses = {
-    sm: 'w-2 h-2',
-    md: 'w-3 h-3',
-    lg: 'w-4 h-4',
+    sm: 'w-3 h-3',
+    md: 'w-4 h-4',
+    lg: 'w-5 h-5',
   };
 
   const getStatusConfig = () => {
@@ -53,7 +53,7 @@ export const VpnStatusIndicator = ({ status, size = 'md' }: VpnStatusIndicatorPr
         sizeClasses[size],
         config.className
       )}>
-        <Icon className={cn('text-background', iconSizeClasses[size])} />
+        <Icon className={cn('text-background font-bold', iconSizeClasses[size])} strokeWidth={3} />
       </div>
       <span className="text-sm font-medium text-foreground">
         {config.label}
