@@ -47,15 +47,11 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        // VPN Status colors
+        status: {
+          secure: "hsl(var(--status-secure))",
+          connecting: "hsl(var(--status-connecting))",
+          vulnerable: "hsl(var(--status-vulnerable))",
         },
       },
       borderRadius: {
@@ -84,6 +80,18 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse": "pulse 2s infinite",
+        "glow": "glow 2s ease-in-out infinite alternate",
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-accent': 'var(--gradient-accent)',
+        'gradient-bg': 'var(--gradient-bg)',
+      },
+      boxShadow: {
+        'glow-secure': 'var(--glow-secure)',
+        'glow-connecting': 'var(--glow-connecting)',
+        'glow-vulnerable': 'var(--glow-vulnerable)',
       },
     },
   },

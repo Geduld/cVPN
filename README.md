@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
+# VPN Status Monitor
 
-## Project info
+A compact personal VPN status application designed for monitoring iVPN.net connections. The app detects when your IP location changes from Germany, indicating VPN status.
 
-**URL**: https://lovable.dev/projects/926925f5-a034-48d0-9cfc-5e63751e0871
+## Features
 
-## How can I edit this code?
+- **Real-time VPN Detection**: Monitors your IP location every 10 seconds
+- **3-State Status System**:
+  - 🟢 **Secure**: VPN is active (IP outside Germany)
+  - 🟡 **Connecting**: Checking status or network issues
+  - 🔴 **Vulnerable**: VPN inactive (showing German IP)
+- **Compact Design**: Optimized for 420x135 window size
+- **Web3 Aesthetics**: Exodus-inspired color scheme with gradients and glows
+- **Multiple IP Services**: Fallback between ipapi.co, ip-api.com, and ipinfo.io
 
-There are several ways of editing your application.
+## Electron Compilation
 
-**Use Lovable**
+This app is designed to be compiled with Electron into a standalone .exe file.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/926925f5-a034-48d0-9cfc-5e63751e0871) and start prompting.
+### Quick Setup:
+1. Build the React app: `npm run build`
+2. Follow the instructions in `electron-config.md`
+3. The final app will have:
+   - `autoHideMenuBar: true`
+   - Title: "VPN Status"
+   - Fixed 420x135 window size
+   - Always on top option
 
-Changes made via Lovable will be committed automatically to this repo.
+## Development
 
-**Use your preferred IDE**
+```bash
+# Install dependencies
+npm install
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Run development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-**Edit a file directly in GitHub**
+## Tech Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **Frontend**: React + TypeScript + Vite
+- **Styling**: Tailwind CSS with custom web3 design system
+- **UI Components**: Shadcn/ui with custom variants
+- **Icons**: Lucide React
+- **State Management**: React hooks with custom VPN status hook
 
-**Use GitHub Codespaces**
+## Configuration
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The app automatically detects VPN status by checking if your IP appears to be in Germany. If you're physically in a different location, you can modify the country check in `src/hooks/useVpnStatus.ts`.
 
-## What technologies are used for this project?
+## License
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/926925f5-a034-48d0-9cfc-5e63751e0871) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is created with [Lovable](https://lovable.dev) for personal VPN monitoring.

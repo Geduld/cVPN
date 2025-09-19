@@ -1,42 +1,21 @@
+/* VPN Status App - Compact Electron window */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 420px;
+  height: 135px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Electron window specific styles */
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-app-region: drag; /* Make window draggable */
+  user-select: none; /* Prevent text selection */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* Make buttons clickable */
+button, a, [role="button"] {
+  -webkit-app-region: no-drag;
 }
