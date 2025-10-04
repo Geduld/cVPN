@@ -35,7 +35,7 @@ export const VpnStatusApp = () => {
   };
 
   return (
-    <div className="w-full h-full bg-gradient-bg flex items-center justify-center">
+    <div className="w-full h-full bg-background flex items-center justify-center">
       <div className="w-full h-full bg-card/90 backdrop-blur-sm border-none">
         <div className="p-3 h-full flex flex-col justify-between">
           {/* Header with Status */}
