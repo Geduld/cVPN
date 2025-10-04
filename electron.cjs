@@ -10,7 +10,7 @@ function createWindow() {
     maximizable: false,
     minimizable: true,
     alwaysOnTop: true,
-    title: 'VPN Status',
+    title: 'cVPN',
     icon: path.join(__dirname, 'public', 'favicon.ico'),
     webPreferences: {
       nodeIntegration: false,
