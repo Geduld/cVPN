@@ -1,4 +1,4 @@
-# VPN Status Monitor
+# cVPN - VPN Status Monitor
 
 A compact personal VPN status application designed for monitoring iVPN.net connections. The app detects when your IP location changes from Germany, indicating VPN status.
 
@@ -9,7 +9,6 @@ A compact personal VPN status application designed for monitoring iVPN.net conne
   - 🟢 **Secure**: VPN is active (IP outside Germany)
   - 🟡 **Connecting**: Checking status or network issues
   - 🔴 **Vulnerable**: VPN inactive (showing German IP)
-- **Compact Design**: Optimized for 420x135 window size
 - **Web3 Aesthetics**: Exodus-inspired color scheme with gradients and glows
 - **Multiple IP Services**: Fallback between ipapi.co, ip-api.com, and ipinfo.io
 
@@ -23,7 +22,7 @@ This app is designed to be compiled with Electron into a standalone .exe file.
 3. The final app will have:
    - `autoHideMenuBar: true`
    - Title: "VPN Status"
-   - Fixed 420x135 window size
+   - Fixed 420x150 window size
    - Always on top option
 
 ## Development
