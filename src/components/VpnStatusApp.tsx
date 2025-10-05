@@ -40,9 +40,9 @@ export const VpnStatusApp = () => {
         {/* Status on Left */}
         <VpnStatusIndicator status={status} size="lg" />
 
-        {/* Location and IP on Right */}
+        {/* Location and IP on Right - Side by Side */}
         {ipInfo && (
-          <div className="flex flex-col gap-2 items-end">
+          <div className="flex flex-col gap-1.5 items-end">
             <div className="flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 text-accent flex-shrink-0" />
               <span className="text-xs text-foreground truncate">{getLocationText()}</span>
