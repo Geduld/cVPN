@@ -36,27 +36,24 @@ export const VpnStatusApp = () => {
 
   return (
     <div className="w-full h-full bg-background flex items-center justify-center p-3">
-      <div className="w-full h-full bg-card/95 backdrop-blur-sm rounded-lg border border-border/50 p-3 flex flex-col gap-3">
-        {/* Status Row */}
-        <div className="flex items-center justify-start">
-          <VpnStatusIndicator status={status} size="md" />
-        </div>
+      <div className="w-full h-full bg-card/95 backdrop-blur-sm rounded-lg border border-border/50 p-3 flex items-center justify-between gap-4">
+        {/* Status on Left */}
+        <VpnStatusIndicator status={status} size="lg" />
 
-        {/* Info Grid */}
+        {/* Location and IP on Right */}
         {ipInfo && (
-          <div className="grid grid-cols-2 gap-2 text-xs">
+          <div className="flex flex-col gap-2 items-end">
             <div className="flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 text-accent flex-shrink-0" />
-              <span className="text-foreground truncate">{getLocationText()}</span>
+              <span className="text-xs text-foreground truncate">{getLocationText()}</span>
             </div>
             
-            <div className="flex items-center gap-1.5 justify-end">
+            <div className="flex items-center gap-1.5">
               <Globe className="w-3.5 h-3.5 text-accent flex-shrink-0" />
-              <span className="text-foreground font-mono">{ipInfo.ip}</span>
+              <span className="text-xs text-foreground font-mono">{ipInfo.ip}</span>
             </div>
           </div>
         )}
-
 
         {/* Error Message */}
         {error && (

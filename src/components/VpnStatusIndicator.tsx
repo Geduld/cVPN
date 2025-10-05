@@ -11,13 +11,19 @@ export const VpnStatusIndicator = ({ status, size = 'md' }: VpnStatusIndicatorPr
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-6 h-6',
-    lg: 'w-8 h-8',
+    lg: 'w-10 h-10',
   };
 
   const iconSizeClasses = {
     sm: 'w-3 h-3',
     md: 'w-4 h-4',
-    lg: 'w-5 h-5',
+    lg: 'w-6 h-6',
+  };
+
+  const textSizeClasses = {
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-lg',
   };
 
   const getStatusConfig = () => {
@@ -47,7 +53,7 @@ export const VpnStatusIndicator = ({ status, size = 'md' }: VpnStatusIndicatorPr
   const Icon = config.icon;
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-3">
       <div className={cn(
         'status-indicator flex items-center justify-center',
         sizeClasses[size],
@@ -55,7 +61,7 @@ export const VpnStatusIndicator = ({ status, size = 'md' }: VpnStatusIndicatorPr
       )}>
         <Icon className={cn('text-background font-bold', iconSizeClasses[size])} strokeWidth={3} />
       </div>
-      <span className="text-sm font-medium text-foreground">
+      <span className={cn('font-semibold text-foreground', textSizeClasses[size])}>
         {config.label}
       </span>
     </div>
