@@ -38,17 +38,8 @@ export const VpnStatusApp = () => {
     <div className="w-full h-full bg-background flex items-center justify-center p-3">
       <div className="w-full h-full bg-card/95 backdrop-blur-sm rounded-lg border border-border/50 p-3 flex flex-col gap-3">
         {/* Status Row */}
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-start">
           <VpnStatusIndicator status={status} size="md" />
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={refresh}
-            disabled={isLoading}
-            className="h-7 w-7 p-0 hover:bg-primary/20"
-          >
-            <RefreshCw className={cn('w-3.5 h-3.5', isLoading && 'animate-spin')} />
-          </Button>
         </div>
 
         {/* Info Grid */}
@@ -66,10 +57,6 @@ export const VpnStatusApp = () => {
           </div>
         )}
 
-        {/* Time Display */}
-        <div className="text-[10px] text-muted-foreground text-center">
-          Last checked: {formatTime(lastChecked)}
-        </div>
 
         {/* Error Message */}
         {error && (
