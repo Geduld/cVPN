@@ -40,18 +40,14 @@ export const VpnStatusApp = () => {
         {/* Status on Left */}
         <VpnStatusIndicator status={status} size="lg" />
 
-        {/* Location and IP on Right - Side by Side */}
+        {/* Location and IP on Right - Aligned icons (same column) */}
         {ipInfo && (
-          <div className="flex flex-col gap-1.5 items-end">
-            <div className="flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-accent flex-shrink-0" />
-              <span className="text-xs text-foreground truncate">{getLocationText()}</span>
-            </div>
-            
-            <div className="flex items-center gap-1.5">
-              <Globe className="w-3.5 h-3.5 text-accent flex-shrink-0" />
-              <span className="text-xs text-foreground font-mono">{ipInfo.ip}</span>
-            </div>
+          <div className="grid grid-cols-[auto_auto] gap-x-1.5 gap-y-1 items-center justify-items-end text-xs">
+            <MapPin className="w-3.5 h-3.5 text-accent" />
+            <span className="text-foreground truncate font-semibold">{getLocationText()}</span>
+
+            <Globe className="w-3.5 h-3.5 text-accent" />
+            <span className="text-foreground font-mono">{ipInfo.ip}</span>
           </div>
         )}
 
