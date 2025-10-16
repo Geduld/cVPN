@@ -6,7 +6,7 @@ import { RefreshCw, MapPin, Wifi, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export const VpnStatusApp = () => {
-  const { status, ipInfo, lastChecked, isLoading, error, refresh } = useVpnStatus(10000);
+  const { status, ipInfo, lastChecked, isLoading, error, refresh } = useVpnStatus(1000);
 
   const formatTime = (date: Date | null) => {
     if (!date) return 'Never';
