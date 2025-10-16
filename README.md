@@ -31,11 +31,18 @@ This app is designed to be compiled with Electron into a standalone .exe file.
 # Install dependencies
 npm install
 
-# Run development server
+# Run Electron app (development)
+npm start
+
+# Local Server
 npm run dev
 
-# Build for production
+# Build front-end for production
 npm run build
+
+# Package as .exe (optional)
+npm run dist
+
 ```
 
 ## Tech Stack
