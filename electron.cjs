@@ -11,7 +11,7 @@ function createWindow() {
     minimizable: true,
     alwaysOnTop: true,
     title: 'cVPN',
-    icon: path.join(__dirname, 'public', 'favicon.ico'),
+    icon: path.join(__dirname, 'public', 'app-icon.ico'),
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
