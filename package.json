@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "electron": "electron .",
-    "dist": "npm run build && electron-builder --publish=never"
+    "dist": "npm run build && electron-builder --publish=never",
+    "start": "electron ."
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
